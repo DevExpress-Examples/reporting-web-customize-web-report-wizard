@@ -1,1 +1,7 @@
 AspNetCoreWizardCustomization/package-lock.json
+**/node_modules/
+**/bin/
+**/obj/
+**/packages/
+**/.vs/
+*.bak
