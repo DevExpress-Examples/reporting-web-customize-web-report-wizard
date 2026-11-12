@@ -6,8 +6,8 @@
         }
     }
     function afterFinish(s) {
-        s.wizardResult.name(s.state.reportTitle.replace(/ /g, ""))
-        s.wizardResult.displayName(s.state.reportTitle)
+        s.wizardResult.name = s.state.reportTitle.replace(/ /g, "");
+        s.wizardResult.displayName = s.state.reportTitle;
     }
     function CustomizeWizard(s, e) {
         if (e.Type === "ReportWizard") {
