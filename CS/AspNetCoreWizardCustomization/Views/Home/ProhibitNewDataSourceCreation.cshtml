@@ -3,7 +3,8 @@
         // Indetify the section that allows users to select available data sources.
         if (args.sectionId === DevExpress.Reporting.Designer.Wizard.FullscreenReportWizardSectionId.ChooseAvailableDataSourcePage) {
             // Disable the capability to create new data sources (hide the radio group with a choice).
-            args.section.canCreateNew(false);
+            args.section.canCreateNew = false;
+            args.section.notifyStateChanged();
         }
     }
 
@@ -17,8 +18,8 @@
             // Handle the page's beforeSectionInitialize event.
             args.page.events.addHandler("beforeSectionInitialize", beforeSectionInit)
             // // Override the navigation logic to skip the removed section.
-            args.page.getNextPageId = function (pageId) {
-                if (!pageId) return DevExpress.Reporting.Designer.Wizard.FullscreenReportWizardSectionId.ChooseAvailableDataSourcePage;
+            args.page.getNextSectionId = function (sectionId) {
+                if (!sectionId) return DevExpress.Reporting.Designer.Wizard.FullscreenReportWizardSectionId.ChooseAvailableDataSourcePage;
             }
         }
     }
