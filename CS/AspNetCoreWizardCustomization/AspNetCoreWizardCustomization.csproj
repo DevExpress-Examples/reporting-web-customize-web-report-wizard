@@ -16,7 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="26.2.*-*" />
-    <PackageReference Include="System.Data.SQLite" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.2" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\Home\CustomizeWizardResult.cshtml">
